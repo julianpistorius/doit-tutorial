@@ -39,4 +39,5 @@ def task_draw():
         'file_dep': ['requests.models.dot'],
         'targets': ['requests.models.png'],
         'actions': ['dot -Tpng %(dependencies)s -o %(targets)s'],
+        'clean': True,
     }
