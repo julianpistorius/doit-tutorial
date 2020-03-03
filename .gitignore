@@ -205,3 +205,4 @@ fabric.properties
 projects/**/*
 .doit.db
 *.deps
+*.dot
