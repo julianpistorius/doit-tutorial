@@ -31,3 +31,12 @@ def task_dot():
         'targets': ['requests.models.dot'],
         'actions': [module_to_dot],
     }
+
+
+def task_draw():
+    """generate image from a dot file"""
+    return {
+        'file_dep': ['requests.models.dot'],
+        'targets': ['requests.models.png'],
+        'actions': ['dot -Tpng %(dependencies)s -o %(targets)s'],
+    }
