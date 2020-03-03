@@ -1,5 +1,7 @@
 def task_imports():
+    """find imports from a python module"""
     return {
-        'actions': ['python -m import_deps '
-                    'projects/requests/requests/models.py > requests.models.deps'],
+        'file_dep': ['projects/requests/requests/models.py'],
+        'targets': ['requests.models.deps'],
+        'actions': ['python -m import_deps %(dependencies)s > %(targets)s'],
     }
