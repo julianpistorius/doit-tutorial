@@ -2,6 +2,11 @@
 
 See the [doit tutorial](https://pydoit.org/tutorial_1.html)
 
+Note: This code is for the instructions up to the 
+[section on 'clean'](https://pydoit.org/tutorial_1.html#clean).
+
+- [ ] Complete the rest of the tutorial
+
 ## To use this code
 
 1. Install [pipenv](https://pipenv.readthedocs.io/) (if you don't already have it):
