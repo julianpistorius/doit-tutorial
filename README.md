@@ -10,27 +10,33 @@ See the [doit tutorial](https://pydoit.org/tutorial_1.html)
 brew install pipenv
 ```
 
-2. Install the dependencies by running the following in the same directory as 
+2. Install `graphviz`:
+
+```bash
+brew install graphviz
+```
+
+3. Install the dependencies by running the following in the same directory as 
 the `Pipfile` file:
 
 ```bash
 pipenv install
 ```
 
-3. Activate the virtual environment:
+4. Activate the virtual environment:
 
 ```bash
 pipenv shell
 ``` 
 
-4. Make the projects directory and clone the `requests` repository:
+5. Create the projects directory and clone the `requests` repository:
 
 ```bash
 mkdir -p projects
 git clone --depth 1 https://github.com/requests/requests.git projects/requests
 ```
 
-4. Run the `doit` workflow:
+6. Run the `doit` workflow:
 
 ```bash
 doit
@@ -45,7 +51,7 @@ $ doit
 .  draw
 ```
 
-5. Check that the files were created:
+7. Check that the files were created:
 
 ```bash
 ls -l requests*
@@ -60,7 +66,7 @@ $ ls -l requests*
 -rw-r--r--  1 johndoe  staff  37154 Mar  4 10:28 requests.models.png
 ``` 
 
-6. Check that the `requests.models.png` looks like the one in the tutorial.
+8. Check that the `requests.models.png` looks like the one in the tutorial.
 
 
 ## Exercises for the reader
