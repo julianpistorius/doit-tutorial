@@ -1,6 +1,7 @@
 import pathlib
-from doit.tools import create_folder, run_once
+
 import pygraphviz
+from doit.tools import create_folder, run_once
 
 PROJECTS_PATH = 'projects'
 
@@ -18,15 +19,26 @@ def module_to_dot(dependencies, targets):
     graph.write(targets[0])
 
 
+def task_create_projects():
+    "Create the projects directory"
+    return {
+        'actions': [
+            (create_folder, [PROJECTS_PATH])
+        ],
+        'targets': [
+            PROJECTS_PATH
+        ],
+        'uptodate': [run_once]
+    }
+
+
 def task_git():
     """Clone the repo"""
     return {
         'actions': [
-            (create_folder, [PROJECTS_PATH]),
             f'git clone --depth 1 https://github.com/requests/requests.git {PROJECTS_PATH}/requests'
         ],
         'targets': [
-            PROJECTS_PATH,
             f'{PROJECTS_PATH}/requests/requests/models.py'
         ],
         'uptodate': [run_once]
