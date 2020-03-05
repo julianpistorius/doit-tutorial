@@ -34,14 +34,7 @@ pipenv install
 pipenv shell
 ``` 
 
-5. Create the projects directory and clone the `requests` repository:
-
-```bash
-mkdir -p projects
-git clone --depth 1 https://github.com/requests/requests.git projects/requests
-```
-
-6. Run the `doit` workflow:
+5. Run the `doit` workflow:
 
 ```bash
 doit
@@ -56,7 +49,7 @@ $ doit
 .  draw
 ```
 
-7. Check that the files were created:
+6. Check that the files were created:
 
 ```bash
 ls -l requests*
@@ -71,7 +64,7 @@ $ ls -l requests*
 -rw-r--r--  1 johndoe  staff  37154 Mar  4 10:28 requests.models.png
 ``` 
 
-8. Check that the `requests.models.png` looks like the one in the tutorial.
+7. Check that the `requests.models.png` looks like the one in the tutorial.
 
 
 ## Exercises for the reader
